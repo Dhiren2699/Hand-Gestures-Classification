@@ -1,0 +1,34 @@
+<html>
+<head>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"> </script>
+<script src="webcam.js"></script>
+<script src="rps-dataset.js"></script>
+</head>
+<h4><center>Rock , Paper , Scissors , Spock and Lizard Guessing !</center></h4>
+<h3><center>Allow Access to camera and give model take few of your samples and click Train!</center></h3><br>
+<body bgcolor='#828282'><center>
+	<div>
+		<div>
+			<video autoplay playsinline muted id="wc" width="224" height="224"></video>
+		</div>
+	</div><br>
+	<button type="button" id="0" onclick="handleButton(this)" >Rock</button>
+	<button type="button" id="1" onclick="handleButton(this)" >Paper</button>
+	<button type="button" id="2" onclick="handleButton(this)" >Scissors</button>
+	<button type="button" id="3" onclick="handleButton(this)" >Spock</button>
+	<button type="button" id="4" onclick="handleButton(this)" >Lizard</button><br>
+	<div id="rocksamples">Rock Samples:</div>
+	<div id="papersamples">Paper Samples:</div>
+	<div id="scissorssamples">Scissors Samples:</div>
+	<div id="spocksamples">Spock Samples:</div>
+	<div id="lizardsamples">Lizard Samples:</div><br><br>
+	<button type="button" id="train" onclick="doTraining()" >Train Network</button><br>
+	<div id="dummy"><b>Once training is complete, click 'Start Predicting' to see predictions, and 'Stop Predicting' to end.</b></div><br>
+	<button type="button" id="startPredicting" onclick="startPredicting()" >Start Predicting</button>
+	<button type="button" id="stopPredicting" onclick="stopPredicting()" >Stop Predicting</button>
+    
+	<div id="prediction"></div></center>
+</body>
+
+<script src="index_exercise.js"></script>
+</html>
